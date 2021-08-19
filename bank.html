@@ -8,40 +8,48 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <section class="transiction container mx-auto">
-            <h3 class="text-center font-medium text-gray text-2xl mt-8 text-yellow-700">Baper Bank</h3>
+    <header>
+        <div>
+            <h3 class="text-center font-medium text-gray text-5xl mt-8 text-yellow-700">Baper Bank</h3>
+        </div>
+    </header>
+    <main class="mx-auto w-3/4">
+        <section class="transiction container">
+            
             <div class="grid grid-cols-3 gap-2 mt-12">
                 <div class="text-center rounded bg-purple-400 p-8 m-4 font-medium text-white text-2xl">
                     <h3>Last Deposit</h3>
-                    <h4>$<span>00</span></h4>
+                    <h4>$<span id="deposit-total">00</span></h4>
                 </div>
                 <div class="text-center rounded bg-blue-400 p-8 m-4 font-medium text-white text-2xl">
                     <h3>Last Withdraw</h3>
-                    <h4>$<span>00</span></h4>
+                    <h4>$<span id="withdraw-total">00</span></h4>
                 </div>
                 <div class="text-center rounded bg-green-400 p-8 m-4 font-medium text-white text-2xl">
                     <h3>Total Blance</h3>
-                    <h4>$<span>00</span></h4>
+                    <h4>$<span id="total-blance">100</span></h4>
                 </div>
             </div>
         </section>
         <section class="transiction container mx-auto">
             <div class="grid grid-cols-2 gap-2 mt-8">
-                <div class="withdraw rounded bg-yellow-400 p-8 m-4 font-medium text-white">
+                <div class="deposit rounded bg-yellow-400 p-8 m-4 font-medium text-white">
                     <h3 class=" text-2xl">Deposit Now</h3>
-                    <input class="my-3 p-2 border-gray-200 border-2 rounded text-1" type="text" placeholder="$ Enter Amount">
+                    <input id="deposit-input" class="my-3 p-2 border-gray-200 border-2 rounded text-gray-700" type="text" placeholder="$ Enter Amount">
                     <br>
-                    <button class="bg-gray-800 px-4 py-2 rounded" type="submit">Submit</button>
+                    <button id="deposit-submit" class="bg-gray-800 px-4 py-2 rounded" type="submit">Submit</button>
                 </div>
                 <div class=" withdraw rounded bg-red-400 p-8 m-4 font-medium text-white ">
                     <h3 class=" text-2xl">Withdraw Now</h3>
-                    <input class="my-3 p-2 border-gray-200 border-2 rounded text-1" type="text" placeholder="$ Enter Amount">
+                    <input id="withdraw-input" class="my-3 p-2 border-gray-200 border-2 rounded text-gray-700" type="text" placeholder="$ Enter Amount">
                     <br>
-                    <button class="bg-gray-800 px-4 py-2 rounded" type="submit">Submit</button>
+                    <button id="withdraw-submit" class="bg-gray-800 px-4 py-2 rounded" type="submit">Submit</button>
                 </div>
             </div>
         </section>
     </main>
+
+
+    <script src="bank.js"></script>
 </body>
 </html>
